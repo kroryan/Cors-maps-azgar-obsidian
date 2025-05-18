@@ -1,0 +1,39 @@
+<!--
+Este es un ejemplo de cómo puedes integrar un mapa servido por tu contenedor Docker
+dentro de Azgaar Fantasy Map Generator usando un iframe.
+
+Instrucciones:
+1. Reemplaza `nombre-del-mapa.map` con el nombre real de tu archivo de mapa.
+   Asegúrate de que este archivo exista en la carpeta `maps` que montaste en el contenedor.
+2. Guarda este código como un archivo HTML (por ejemplo, `azgaar_con_mapa.html`).
+3. Abre este archivo HTML en tu navegador web.
+
+Azgaar cargará y mostrará el mapa desde la URL proporcionada.
+-->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name_="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Azgaar con Mapa Personalizado</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden; /* Para evitar barras de desplazamiento en el cuerpo */
+        }
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none; /* Sin bordes en el iframe */
+        }
+    </style>
+</head>
+<body>
+    <iframe 
+        src="https://azgaar.github.io/Fantasy-Map-Generator/?mapurl=http://localhost:4040/maps/example.map"
+        title="Azgaar Fantasy Map Generator con Mapa Personalizado">
+    </iframe>
+</body>
+</html>

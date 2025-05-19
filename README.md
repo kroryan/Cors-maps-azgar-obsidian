@@ -35,7 +35,7 @@ maps/
 
 ```bash
 docker build -t azgaar-map-server .
-docker run -d -p 4040:80 --name mapserver azgaar-map-server
+docker run -d -p 4040:4040 --name mapserver azgaar-map-server
 ```
 
 This exposes your maps at:
